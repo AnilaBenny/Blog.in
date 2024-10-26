@@ -7,7 +7,7 @@ exports.connectToDatabase = connectToDatabase;
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const databaseURI = "mongodb+srv://anilabenny810:Anila123@persual.usrlq.mongodb.net/persual?retryWrites=true&w=majority&appName=Persual";
+const databaseURI = "mongodb+srv://anilacbenny810:YQKaS1wYCrEscHsV@blogin.pbman.mongodb.net/";
 async function connectToDatabase() {
     try {
         if (!databaseURI) {

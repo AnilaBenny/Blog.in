@@ -35,7 +35,6 @@ console.log('App is starting...');
     app.listen(8080, () => {
         console.log(`Server is running on port ${PORT}`);
     });
-    console.log('hee');
 }).catch((error) => {
     console.error('Failed to connect to the database:', error);
     process.exit(1);

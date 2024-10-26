@@ -1,5 +1,5 @@
 import  { useState, useEffect } from 'react';
-import { FaEllipsisV, FaEdit, FaTrash, FaThumbsUp, FaLock } from 'react-icons/fa';
+import { FaEllipsisV, FaEdit, FaTrash, FaLock } from 'react-icons/fa';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {   useSelector } from 'react-redux';
 import axiosInstance from '../../AxiosConfig/AxiosConfig';
