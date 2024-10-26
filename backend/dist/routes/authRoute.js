@@ -1,0 +1,23 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const authController_1 = require("../controllers/authController");
+const Multer_1 = __importDefault(require("../utils/Multer"));
+const authRoute = express_1.default.Router();
+authRoute.post('/login', authController_1.loginDetails);
+authRoute.post('/register', authController_1.registrationDetails);
+authRoute.get('/logout', authController_1.logoutUser);
+authRoute.put('/editprofile', authController_1.EditProfile);
+authRoute.post('/changepassword', authController_1.ChangePassword);
+authRoute.post('/writearticle', Multer_1.default.single('image'), authController_1.WriteArticle);
+authRoute.put('/editarticle', Multer_1.default.single('image'), authController_1.EditArticle);
+authRoute.delete('/deletearticle/:articleId', authController_1.deleteArticle);
+authRoute.post('/likearticle', authController_1.likeArticle);
+authRoute.post('/dislikearticle', authController_1.dislikeArticle);
+authRoute.post('/userarticles', authController_1.getAllArticlesByUser);
+authRoute.post('/blockarticle', authController_1.blockArticle);
+authRoute.post('/prefferedarticle', authController_1.getAllArticlesByUsersPreference);
+exports.default = authRoute;
